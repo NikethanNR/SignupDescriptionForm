@@ -1,0 +1,52 @@
+
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" #sidenav opened position="start">
+      <section class = "tp-section">
+        <mat-nav-list>
+  
+          <a mat-list-item [routerLink]="'/create-account'"> Create Account </a>
+          <a mat-list-item [routerLink]="'/login'"> DESCRIPTION </a>
+          <a mat-list-item [routerLink]="'/register'"> SIGNUP PAGE </a>
+          <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>CLOSE PAGE</a>
+   
+        </mat-nav-list>
+      </section>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        COMPANY NAME
+        <span class="toolbar-spacer"></span>
+        MY PAGE
+      </mat-toolbar>
+      <div class="main-content">
+        <p>RANDOM DESCRIPTION</p>
+        <span>Google LLC is an American multinational technology company that specializesin Internet-related services and products, which include online advertising
+           technologies, search engine, cloud computing, software, and hardware. It is considered one of the Big Four technology companies, alongside Amazon, Apple,
+            and Facebook.
+
+          Google was founded in September 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14 
+          percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a California privately held company
+           on September.<br> <br><br>Google was then reincorporated in Delaware on October 22, 2002.[12] An initial public offering (IPO) took place on August 19,
+            2004, and Google moved to its headquarters in Mountain View, California, nicknamed the Googleplex. In August 2015, Google announced plans to reorganize its various
+             interests as a conglomerate called Alphabet Inc. Google is Alphabet's leading subsidiary and will continue to be the umbrella company for Alphabet's Internet 
+             interests. Sundar Pichai was appointed CEO of Google, replacing Larry Page who became the CEO of Alphabet.
+          
+          The company's rapid growth since incorporation has triggered a chain of products, acquisitions, and partnerships beyond Google's core search engine (Google Search).<br><br><br>
+           It offers services designed for work and productivity (Google Docs, Google Sheets, and Google Slides), email (Gmail), scheduling and time management 
+           (Google Calendar), cloud storage (Google Drive), instant messaging and video chat (Duo, Hangouts), language translation (Google Translate), mapping and navigation 
+           (Google Maps, Waze, Google Earth, Street View), video sharing (YouTube), note-taking (Google Keep), and photo organizing and editing (Google Photos). The company 
+           leads the development of the Android mobile operating system, the Google Chrome web browser, and Chrome OS, a lightweight operating system based on the Chrome 
+           browser. 
+          
+          </span>
+      </div>
+      <br>
+      <br>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  

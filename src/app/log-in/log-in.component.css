@@ -1,0 +1,45 @@
+a,p{
+    color: yellow;
+    text-decoration: none;
+    
+}
+.mat-divider{
+    width:100%;
+}
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+mat-sidenav {
+    width: 280px;
+    padding:15px;
+}
+.mat-drawer { 
+    background-color: #4aacca;
+    color:#fff
+}
+.main-content {
+    padding:20px;
+}
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+mat-sidenav-container{
+background:url("E:\Project\signup\src\assets\bg.png");
+background-repeat: no-repeat;
+background-color: lightsteelblue;
+background-size: cover ;
+background-position: right, left;
+}
+
+.main-content{
+font-size: 30px;
+text-align: center;
+color: aquamarine;
+padding-right: 90px;
+}
+.tp-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+    width:100px;   
+ }

@@ -1,0 +1,84 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <div class="jumbotron">
+        <div class="container">
+            <mat-card class="box">
+                <mat-card-header>
+                    <mat-card-title class="header"><span>SIGNUP PAGE</span></mat-card-title>
+                </mat-card-header>
+                <br>
+                <br>
+
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <mat-card-content>
+
+                        <div class="form-group">
+                            <mat-form-field style="width:335px !important">
+                                <input matInput placeholder="Email ID" formControlName="email" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                    <div *ngIf="f.email.errors.required">Email is required</div>
+                                    <div class="res" *ngIf="f.email.errors.email">Enter Valid Email-ID</div>
+                                </div>
+                            </mat-form-field>
+                        </div>
+                       <br>
+
+                        <div class="form-group">
+                            <mat-form-field style="width:335px !important">
+                                <input matInput placeholder="User Name / ID"  formControlName="Name" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f.Name.errors }" />
+                                <div *ngIf="submitted && f.Name.errors" class="invalid-feedback">
+                                    <div *ngIf="f.Name.errors.required">Name is required</div>
+                                </div>
+                            </mat-form-field>
+                        </div>
+                        <br>
+
+                        <div class="form-group">
+                            <mat-form-field style="width:335px !important" color="red">
+                                <input matInput placeholder="Password" formControlName="password" class="form-control" maxlength="10"
+                                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                    <div *ngIf="f.password.errors.required">Password is required</div>
+                                    <div class="res" *ngIf="f.password.errors.pattern">Enter Valid Password</div>
+                                </div>
+                            </mat-form-field>
+                        </div>
+                        <br>
+
+                        <div class="form-group">
+                            <mat-form-field style="width:335px !important">
+                                <input matInput placeholder="Mobile Number" formControlName="MobileNo"
+                                    class="form-control" [ngClass]="{ 'is-invalid': submitted && f.MobileNo.errors }" />
+                                <div *ngIf="submitted && f.MobileNo.errors" class="invalid-feedback">
+                                    <div *ngIf="f.MobileNo.errors.required">Mobile No is required</div>
+                                    <div class="res" *ngIf="f.MobileNo.errors.pattern">Enter Valid Number</div>
+                                </div>
+                            </mat-form-field>
+                        </div>
+                        <br><br>
+                        
+                        <div class="form-group">
+
+                            <re-captcha formControlName="reCaptcha" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.reCaptcha.errors }">
+                            </re-captcha>
+                            <div *ngIf="submitted && f.reCaptcha.errors" class="invalid-feedback">
+                                <div class="res" *ngIf="f.reCaptcha.errors.required">Tick the above Check Box</div>
+                            </div>
+                        </div>
+                       <br><br>
+
+                        <div class="form-group" (ngSubmit)=onSubmit()>
+                            <button [disabled]="loading" mat-stroked-button color="warn" class="btn-block">
+                                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> LOGIN
+                            </button>
+                            <a routerLink="/login" class="btn btn-link"></a>
+                        </div>
+
+                    </mat-card-content>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>
